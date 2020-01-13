@@ -58,7 +58,7 @@ func (t *prdiff) GetDiffPullRequests(ctx context.Context, base, head string) ([]
 	prs, err := t.getPullRequestsMergedBetween(
 		ctx,
 		cc.GetBaseCommit().GetCommit().GetCommitter().GetDate(),
-		time.Now(),
+		cc.Commits[cc.GetTotalCommits()-1].GetCommit().GetCommitter().GetDate().Add(1*time.Second),
 		NewClosedPullRequestListOptions(WithBase(t.DefaultBranch)))
 	if err != nil {
 		return nil, fmt.Errorf("failed to get PullRequests: %v\n", err)
@@ -97,7 +97,8 @@ func (t *prdiff) getPullRequestsMergedBetween(ctx context.Context, t1 time.Time,
 		var added int
 		for _, pr := range prs {
 			if mergedAt := pr.GetMergedAt(); !mergedAt.IsZero() {
-				if mergedAt.Equal(t1) || mergedAt.After(t1) && mergedAt.Before(t2) { // [t1, t2)
+				if (mergedAt.Equal(t1) || mergedAt.After(t1)) &&
+					(mergedAt.Equal(t2) || mergedAt.Before(t2)) { // [t1, t2]
 					nprs = append(nprs, pr)
 					added++
 				}
