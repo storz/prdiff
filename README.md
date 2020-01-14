@@ -5,7 +5,7 @@ prdiff enumerates GitHub Pull Requests merged into default branch since last rel
 ### Installation
 
 ```sh
-go get -u github.com/storz/prdiff/cmd
+go get -u github.com/storz/prdiff/cmd/prdiff
 ```
 
 ### Usage
