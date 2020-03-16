@@ -1,6 +1,9 @@
-## prdiff
+## prdiff [![Go Report Card][go-report-badge]][go-report]
 
 prdiff enumerates GitHub Pull Requests merged into default branch since last release (or between two branches/commits/tags)
+
+[go-report]: https://goreportcard.com/report/github.com/storz/prdiff
+[go-report-badge]: https://goreportcard.com/badge/github.com/storz/prdiff
 
 ### Installation
 
