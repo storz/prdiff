@@ -1,9 +1,11 @@
-## prdiff [![GoDoc][godoc-badge]][godoc]
+## prdiff [![GoDoc][godoc-badge]][godoc] [![Go Report Card][go-report-badge]][go-report]
 
 prdiff enumerates GitHub Pull Requests merged into default branch since last release (or between two branches/commits/tags)
 
 [godoc]: https://godoc.org/github.com/storz/prdiff
 [godoc-badge]: https://godoc.org/github.com/storz/prdiff?status.svg
+[go-report]: https://goreportcard.com/report/github.com/storz/prdiff
+[go-report-badge]: https://goreportcard.com/badge/github.com/storz/prdiff
 
 ### Installation
 
