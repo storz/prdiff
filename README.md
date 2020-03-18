@@ -1,6 +1,9 @@
-## prdiff
+## prdiff [![GoDoc][godoc-badge]][godoc]
 
 prdiff enumerates GitHub Pull Requests merged into default branch since last release (or between two branches/commits/tags)
+
+[godoc]: https://godoc.org/github.com/storz/prdiff
+[godoc-badge]: https://godoc.org/github.com/storz/prdiff?status.svg
 
 ### Installation
 
