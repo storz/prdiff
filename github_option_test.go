@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/google/go-github/v28/github"
+	"github.com/google/go-github/v29/github"
 )
 
 func TestNewClosedPullRequestListOptions(t *testing.T) {

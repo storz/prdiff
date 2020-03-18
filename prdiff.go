@@ -7,7 +7,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/google/go-github/v28/github"
+	"github.com/google/go-github/v29/github"
 )
 
 type prdiff struct {
