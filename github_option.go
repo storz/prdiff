@@ -1,6 +1,6 @@
 package prdiff
 
-import "github.com/google/go-github/v28/github"
+import "github.com/google/go-github/v29/github"
 
 type PullRequestListOptionFunc func(*github.PullRequestListOptions)
 
