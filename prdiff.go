@@ -17,6 +17,7 @@ type prdiff struct {
 	DefaultBranch string
 }
 
+// New initializes prdiff command to keep GitHub client and some settings.
 func New(gh *GitHub, owner, repo, defaultBranch string) *prdiff {
 	return &prdiff{
 		gh:            gh,
