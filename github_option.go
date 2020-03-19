@@ -2,6 +2,7 @@ package prdiff
 
 import "github.com/google/go-github/v29/github"
 
+// PullRequestListOptionFunc represents functional option for generating *github.PullRequestListOptions
 type PullRequestListOptionFunc func(*github.PullRequestListOptions)
 
 // NewClosedPullRequestListOptions generates *github.PullRequestListOptions for fetching closed utmost count PRs with update time desc.
