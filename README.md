@@ -11,6 +11,9 @@ prdiff enumerates GitHub Pull Requests merged into default branch since last rel
 
 ```sh
 go get -u github.com/storz/prdiff/cmd/prdiff
+
+# if couldn't find any packages because of you are inside $GOPATH
+GO111MODULE=on go get -u github.com/storz/prdiff/cmd/prdiff
 ```
 
 ### Usage
