@@ -106,7 +106,8 @@ func (t *prdiff) getPullRequestsMergedBetween(ctx context.Context, t1 time.Time,
 			}
 		}
 
-		if added == 0 && prs[len(prs)-1].GetUpdatedAt().Before(t1) {
+		if added == 0 && prs[len(prs)-1].GetUpdatedAt().Before(t1) || // no more possibility of new pull request.
+			res.NextPage == 0 { // reached end of all pull requests.
 			break
 		}
 		opt.Page = res.NextPage
