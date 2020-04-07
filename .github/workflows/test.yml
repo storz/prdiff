@@ -1,0 +1,23 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        go: [ '1.14', '1.13', '1.12' ]
+
+    name: Test ${{ matrix.go }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ./github.com/storz/prdiff
+      - name: Setup go
+        uses: actions/setup-go@v1
+        with:
+          go-version: ${{ matrix.go }}
+      - run: make test
+        working-directory: ./github.com/storz/prdiff
